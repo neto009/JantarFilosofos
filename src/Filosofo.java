@@ -1,50 +1,54 @@
 public class Filosofo {
 
-    private Integer posicao;
-    private String nome;
-    private Garfo direito, esquerdo;
+    private Integer id;
+    private String name;
+    private Integer garfoDireito;
+    private Integer garfoEsquerdo;
 
-    private void pensar() throws InterruptedException {
-        System.out.println("Filósofo " + posicao + " está pensando");
-        Thread.sleep(2000);
+    private boolean pensando = false;
+
+    public Filosofo(Integer id,String name) {
+        this.name = name;
+        this.id = id;
     }
 
-    public Filosofo(Integer posicao, Garfo direito, Garfo esquerdo) {
-        this.posicao = posicao;
-        this.nome = nome;
-        this.direito = direito;
-        this.esquerdo = esquerdo;
+    public Integer getId() {
+        return id;
     }
 
-    public Integer getPosicao() {
-        return posicao;
+    public void setId(Integer id) {
+        this.id = id;
     }
 
-    public void setPosicao(Integer posicao) {
-        this.posicao = posicao;
+    public boolean isPensando() {
+        return pensando;
     }
 
-    public String getNome() {
-        return nome;
+    public void setPensando(boolean pensando) {
+        this.pensando = pensando;
     }
 
-    public void setNome(String nome) {
-        this.nome = nome;
+    public String getName() {
+        return name;
     }
 
-    public Garfo getDireito() {
-        return direito;
+    public void setName(String name) {
+        this.name = name;
     }
 
-    public void setDireito(Garfo direito) {
-        this.direito = direito;
+    public Integer getGarfoDireito() {
+        return garfoDireito;
     }
 
-    public Garfo getEsquerdo() {
-        return esquerdo;
+    public void setGarfoDireito(Integer garfoDireito) {
+        this.garfoDireito = garfoDireito;
     }
 
-    public void setEsquerdo(Garfo esquerdo) {
-        this.esquerdo = esquerdo;
+    public Integer getGarfoEsquerdo() {
+        return garfoEsquerdo;
+    }
+
+    public void setGarfoEsquerdo(Integer garfoEsquerdo) {
+        this.garfoEsquerdo = garfoEsquerdo;
     }
 }
